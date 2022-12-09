@@ -6,15 +6,13 @@ import {
   Typography,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import SelectField from "../componetns/SelectField";
-import TextFieldComp from "../componetns/TextFieldComp";
-import useAxios from "../api/axiosInstance";
+import SelectField from "../components/SelectField";
+import TextFieldComp from "../components/TextFieldComp";
+import useAxios from "../hooks/useAxios";
 const Home = () => {
+  const navigate = useNavigate();
   const { response, error, loading } = useAxios({ url: "/api_category.php" });
 
-  // console.log(response.trivia_categories);
-
-  const navigate = useNavigate();
   if (loading) {
     return (
       <Box mt={20}>

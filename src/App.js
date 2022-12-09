@@ -1,9 +1,8 @@
 import { Box, Container } from "@mui/material";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
-import FinalScore from "./pages/FinalScore";
 import Home from "./pages/Home";
 import Questions from "./pages/Questions";
+import Results from "./pages/Results";
 
 const App = () => {
   return (
@@ -14,7 +13,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/questions" element={<Questions />} />
-              <Route path="/finalscore" element={<FinalScore />} />
+              <Route path="/finalscore" element={<Results />} />
             </Routes>
           </Box>
         </Container>
